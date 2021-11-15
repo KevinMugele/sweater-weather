@@ -5,7 +5,6 @@ class ActivityFacade
       weather = WeatherFacade.get_forecast(latitude: coordinates.latitude, longitude: coordinates.longitude)
 
       activities = []
-
       activities << ActivitiesService.get_activity('relaxation')
 
       if weather.current_weather[:temperature] >= 60
