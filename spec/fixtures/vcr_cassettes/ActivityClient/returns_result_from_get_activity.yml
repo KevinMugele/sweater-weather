@@ -33,15 +33,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '129'
+      - '152'
       Etag:
-      - W/"81-+a5Cg6GZmEUkvaU3nUKI8i0HCuY"
+      - W/"98-GD0Z0Bpjbh+p2yohnMD1DFzzlc4"
       Date:
-      - Mon, 15 Nov 2021 16:39:42 GMT
+      - Mon, 15 Nov 2021 17:47:13 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"activity":"Write a short story","type":"recreational","participants":1,"price":0,"link":"","key":"6301585","accessibility":0.1}'
-  recorded_at: Mon, 15 Nov 2021 16:39:42 GMT
+      string: '{"activity":"Practice coding in your favorite lanaguage","type":"recreational","participants":1,"price":0,"link":"","key":"7096020","accessibility":0.1}'
+  recorded_at: Mon, 15 Nov 2021 17:47:13 GMT
 recorded_with: VCR 6.0.0
