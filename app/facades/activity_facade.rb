@@ -1,7 +1,7 @@
 class ActivityFacade
   class << self
-    def get_activity(location)
-      coordinates = MapFacade.get_coordinates(location)
+    def get_activity(destination)
+      coordinates = MapFacade.get_coordinates(destination)
       weather = WeatherFacade.get_forecast(latitude: coordinates.latitude, longitude: coordinates.longitude)
 
       activities = []
@@ -16,7 +16,7 @@ class ActivityFacade
         activities << ActivitiesService.get_activity('cooking')
       end
 
-      Activities.new(activities: activities, weather: weather, destination: location)
+      Activities.new(activities: activities, weather: weather, destination: destination)
     end
   end
 end
