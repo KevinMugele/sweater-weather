@@ -21,4 +21,16 @@ RSpec.describe 'API::V1::Activities API' do
       expect(attributes).to have_key(:forecast)
     end
   end
+
+  it 'gives an error if param is empty' do
+    get '/api/v1/activities?destination='
+
+    expect(response).to_not be_successful
+  end
+
+  it 'gives an error if param is nil' do
+    get '/api/v1/activities'
+
+    expect(response).to_not be_successful
+  end
 end
