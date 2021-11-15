@@ -13,5 +13,12 @@ module ExceptionHandler
             end
         }
     end
+
+    rescue_from ActionController::BadRequest do |e|
+      render json: {
+        message: 'Invalid Request',
+        error: { details: e.message }
+      }, status: 400
+    end
   end
 end
