@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.unsplash.com/photos/random?client_id=aaE2BmH30tpR_I9LKTOdYhSGKLsnPcHWe6a6ulmCQPM&query=Sparta,%20nj
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Version:
+      - v1
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1168'
+      Server:
+      - Cowboy
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      X-Unsplash-Version:
+      - v1
+      Etag:
+      - W/"598c19355bcd603cba73915c38013299"
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '48'
+      X-Request-Id:
+      - '08fd0d1b-5fba-454e-ba92-45398a7db5f9'
+      X-Runtime:
+      - '0.106015'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Via:
+      - 1.1 vegur, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 14 Nov 2021 23:02:57 GMT
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-dca17765-DCA, cache-ewr18155-EWR
+      X-Cache:
+      - MISS, MISS
+      X-Cache-Hits:
+      - 0, 0
+      X-Timer:
+      - S1636930978.776863,VS0,VE124
+      Vary:
+      - Accept-Encoding, Origin,Authorization,Accept
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"D28r0CTFPbA","created_at":"2020-12-30T12:30:08-05:00","updated_at":"2021-11-14T04:21:44-05:00","promoted_at":null,"width":7952,"height":5304,"color":"#f3f3f3","blur_hash":"LTIhdC_NIoIT~q-;ITRQM{R%Mxxb","description":null,"alt_description":"red
+        and brown round fruits on tree branch","urls":{"raw":"https://images.unsplash.com/photo-1609348716959-75abc2e52b37?ixid=MnwyNzU2NDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzY5MzA5Nzc\u0026ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1609348716959-75abc2e52b37?crop=entropy\u0026cs=srgb\u0026fm=jpg\u0026ixid=MnwyNzU2NDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzY5MzA5Nzc\u0026ixlib=rb-1.2.1\u0026q=85","regular":"https://images.unsplash.com/photo-1609348716959-75abc2e52b37?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyNzU2NDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzY5MzA5Nzc\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=1080","small":"https://images.unsplash.com/photo-1609348716959-75abc2e52b37?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyNzU2NDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzY5MzA5Nzc\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=400","thumb":"https://images.unsplash.com/photo-1609348716959-75abc2e52b37?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyNzU2NDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzY5MzA5Nzc\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=200"},"links":{"self":"https://api.unsplash.com/photos/D28r0CTFPbA","html":"https://unsplash.com/photos/D28r0CTFPbA","download":"https://unsplash.com/photos/D28r0CTFPbA/download?ixid=MnwyNzU2NDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzY5MzA5Nzc","download_location":"https://api.unsplash.com/photos/D28r0CTFPbA/download?ixid=MnwyNzU2NDR8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzY5MzA5Nzc"},"categories":[],"likes":4,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"topic_submissions":{},"user":{"id":"AgBOYObh1ig","updated_at":"2021-11-14T10:31:25-05:00","username":"mihaiteslariu0","name":"Teslariu
+        Mihai","first_name":"Teslariu","last_name":"Mihai","twitter_username":null,"portfolio_url":null,"bio":"I
+        n s t a g r a m : mihai.teslariu: https://www.instagram.com/mihai.teslariu/\r\nphotosbymihai:  https://www.instagram.com/photosbymihai/                           F
+        a c e b o o k : https://www.facebook.com/PhotosbyMihai","location":null,"links":{"self":"https://api.unsplash.com/users/mihaiteslariu0","html":"https://unsplash.com/@mihaiteslariu0","photos":"https://api.unsplash.com/users/mihaiteslariu0/photos","likes":"https://api.unsplash.com/users/mihaiteslariu0/likes","portfolio":"https://api.unsplash.com/users/mihaiteslariu0/portfolio","following":"https://api.unsplash.com/users/mihaiteslariu0/following","followers":"https://api.unsplash.com/users/mihaiteslariu0/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1631918158202-05080da6beb4image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=32\u0026w=32","medium":"https://images.unsplash.com/profile-1631918158202-05080da6beb4image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=64\u0026w=64","large":"https://images.unsplash.com/profile-1631918158202-05080da6beb4image?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=128\u0026w=128"},"instagram_username":"mihai.teslariu","total_collections":0,"total_likes":0,"total_photos":374,"accepted_tos":true,"for_hire":true,"social":{"instagram_username":"mihai.teslariu","portfolio_url":null,"twitter_username":null,"paypal_email":null}},"exif":{"make":"SONY","model":"ILCE-7RM3","name":"SONY,
+        ILCE-7RM3","exposure_time":"1/60","aperture":"2.5","focal_length":"55.0","iso":100},"location":{"title":"Elizabeth,
+        NJ, USA","name":"Elizabeth, NJ, USA","city":"Elizabeth","country":"United
+        States","position":{"latitude":40.663992,"longitude":-74.210701}},"views":4521,"downloads":53}'
+  recorded_at: Sun, 14 Nov 2021 23:02:57 GMT
+recorded_with: VCR 6.0.0
