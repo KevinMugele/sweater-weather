@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :password_confirmation, presence: true
 
-  after_commit :generate_api_key, on: :create
+  after_commit :create_api_key, on: :create
 
   def api_key
     api_keys.api_token
@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   private
 
-  def generate_api_key
+  def create_api_key
     ApiKey.create!(user: self, token: SecureRandom.hex)
   end
 end
