@@ -33,15 +33,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '152'
+      - '117'
       Etag:
-      - W/"98-GD0Z0Bpjbh+p2yohnMD1DFzzlc4"
+      - W/"75-K1mMayYUbJY/BZRoZGavF6XlGJg"
       Date:
-      - Mon, 15 Nov 2021 17:47:13 GMT
+      - Mon, 15 Nov 2021 23:58:58 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"activity":"Practice coding in your favorite lanaguage","type":"recreational","participants":1,"price":0,"link":"","key":"7096020","accessibility":0.1}'
-  recorded_at: Mon, 15 Nov 2021 17:47:13 GMT
+      string: '{"activity":"Do yoga","type":"recreational","participants":1,"price":0,"link":"","key":"4688012","accessibility":0.9}'
+  recorded_at: Mon, 15 Nov 2021 23:58:58 GMT
 recorded_with: VCR 6.0.0
