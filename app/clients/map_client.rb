@@ -8,6 +8,15 @@ class MapClient
       parse_data(response)
     end
 
+    def get_directions(url, data_hash)
+      response = conn.get(url) do |req|
+        req.params['from'] = data_hash[:origin]
+        req.params['to']   = data_hash[:destination]
+      end
+
+      parse_data(response)
+    end
+
     private
 
     def parse_data(response)
