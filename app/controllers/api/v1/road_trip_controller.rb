@@ -1,6 +1,6 @@
 class Api::V1::RoadTripController < ApplicationController
-  before_action :validate_api_key, only: [:index]
-  before_action :validate_params, only: [:index]
+  before_action :validate_api_key, only: [:create]
+  before_action :validate_params, only: [:create]
 
   def create
     road_trip = RoadTripFacade.get_road_trip(road_trip_params)
