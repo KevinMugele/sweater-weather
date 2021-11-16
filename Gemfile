@@ -40,6 +40,7 @@ group :development, :test do
   gem 'figaro'
   gem 'pry'
   gem 'rspec-rails', '~> 4.1.0'
+  gem 'simplecov'
 end
 
 group :development do
