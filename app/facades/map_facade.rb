@@ -5,5 +5,12 @@ class MapFacade
 
       Location.new(data)
     end
+
+    def get_directions(data_hash)
+      data = MapService.get_directions(data_hash)
+      return nil unless data[:info][:statuscode].zero?
+
+      Directions.new(data)
+    end
   end
 end
