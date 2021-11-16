@@ -7,7 +7,7 @@ class CreateApiKeys < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_index :api_keys, [:bearer_id, :bearer_type]
+    add_index :api_keys, %i[bearer_id bearer_type]
     add_index :api_keys, :token, unique: true
   end
 end

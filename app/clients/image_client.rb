@@ -3,7 +3,7 @@ class ImageClient
     def get_background_image(location)
       response = conn.get('/photos/random') do |req|
         req.params['query'] = location
-      end 
+      end
 
       parse_data(response)
     end

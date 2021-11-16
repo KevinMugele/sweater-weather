@@ -16,9 +16,7 @@ class Api::V1::RoadTripController < ApplicationController
   def validate_api_key
     api_key = ApiKey.find_by(token: params[:api_key])
 
-    if api_key.nil?
-      invalid_api_key
-    end
+    invalid_api_key if api_key.nil?
   end
 
   def invalid_api_key

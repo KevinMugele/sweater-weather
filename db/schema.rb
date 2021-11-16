@@ -10,26 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_15_001437) do
-
+ActiveRecord::Schema.define(version: 20_211_115_001_437) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "api_keys", force: :cascade do |t|
-    t.string "token", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.index ["token"], name: "index_api_keys_on_token", unique: true
-    t.index ["user_id"], name: "index_api_keys_on_user_id"
+  create_table 'api_keys', force: :cascade do |t|
+    t.string 'token', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'user_id'
+    t.index ['token'], name: 'index_api_keys_on_token', unique: true
+    t.index ['user_id'], name: 'index_api_keys_on_user_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'email'
+    t.string 'password_digest'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  add_foreign_key "api_keys", "users"
+  add_foreign_key 'api_keys', 'users'
 end

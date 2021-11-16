@@ -2,7 +2,7 @@ class Activities
   attr_reader :id, :activities, :destination, :forecast
 
   def initialize(data_hash)
-    @id    = nil
+    @id = nil
     @activities = format_activity(data_hash)
     @destination = data_hash[:destination]
     @forecast = format_forecast(data_hash)

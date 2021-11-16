@@ -1,7 +1,7 @@
 class WeatherClient
   class << self
     def get_forecast(exclude: 'minutely,alerts', units: 'imperial',
-                      **arguments)
+                     **arguments)
       response = conn.get('/data/2.5/onecall') do |req|
         req.params['lat']     = arguments[:latitude]
         req.params['lon']     = arguments[:longitude]

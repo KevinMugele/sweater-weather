@@ -4,21 +4,19 @@ class Directions
 
   def initialize(data)
     @id = nil
-    @start_city = origin(data[:route][:locations].first[:adminArea5],
-                         data[:route][:locations].first[:adminArea3])
-    @end_city = destination(data[:route][:locations].last[:adminArea5],
-                            data[:route][:locations].last[:adminArea3])
+    @start_city = origin_city(data[:route][:locations].first[:adminArea5], data[:route][:locations].first[:adminArea3])
+    @end_city = destination_city(data[:route][:locations].last[:adminArea5], data[:route][:locations].last[:adminArea3])
     @end_latitude = data[:route][:locations].last[:displayLatLng][:lat]
     @end_longitude = data[:route][:locations].last[:displayLatLng][:lng]
     @travel_time = estimated_travel_time(data[:route][:realTime])
     @travel_time_seconds = data[:route][:realTime]
   end
 
-  def origin(city, state)
+  def origin_city(city, state)
     "#{city}, #{state}"
   end
 
-  def destination(city, state)
+  def destination_city(city, state)
     "#{city}, #{state}"
   end
 

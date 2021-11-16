@@ -3,47 +3,47 @@ class Forecast
 
   def initialize(data)
     @id              = nil
-    @current_weather = populate_current_weather(data)
-    @daily_weather   = populate_daily_weather(data)
-    @hourly_weather  = populate_hourly_weather(data)
+    @current_weather = create_current_weather(data)
+    @daily_weather   = create_daily_weather(data)
+    @hourly_weather  = create_hourly_weather(data)
   end
 
-  def populate_current_weather(data)
+  def create_current_weather(data)
     {
-      datetime:    Time.zone.at(data[:current][:dt]).to_s,
-      sunrise:     Time.zone.at(data[:current][:sunrise]).to_s,
-      sunset:      Time.zone.at(data[:current][:sunset]).to_s,
+      datetime: Time.zone.at(data[:current][:dt]).to_s,
+      sunrise: Time.zone.at(data[:current][:sunrise]).to_s,
+      sunset: Time.zone.at(data[:current][:sunset]).to_s,
       temperature: data[:current][:temp],
-      feels_like:  data[:current][:feels_like],
-      humidity:    data[:current][:humidity],
-      uvi:         data[:current][:uvi],
-      visibility:  data[:current][:visibility],
-      conditions:  data[:current][:weather].first[:description],
-      icon:        data[:current][:weather].first[:icon]
+      feels_like: data[:current][:feels_like],
+      humidity: data[:current][:humidity],
+      uvi: data[:current][:uvi],
+      visibility: data[:current][:visibility],
+      conditions: data[:current][:weather].first[:description],
+      icon: data[:current][:weather].first[:icon]
     }
   end
 
-  def populate_daily_weather(data)
+  def create_daily_weather(data)
     data[:daily].map do |day|
       {
-        date:       Time.zone.at(day[:dt]).strftime('%Y-%m-%d'),
-        sunrise:    Time.zone.at(day[:sunrise]).to_s,
-        sunset:     Time.zone.at(day[:sunset]).to_s,
-        max_temp:   day[:temp][:max],
-        min_temp:   day[:temp][:min],
+        date: Time.zone.at(day[:dt]).strftime('%Y-%m-%d'),
+        sunrise: Time.zone.at(day[:sunrise]).to_s,
+        sunset: Time.zone.at(day[:sunset]).to_s,
+        max_temp: day[:temp][:max],
+        min_temp: day[:temp][:min],
         conditions: day[:weather].first[:description],
-        icon:       day[:weather].first[:icon]
+        icon: day[:weather].first[:icon]
       }
     end
   end
 
-  def populate_hourly_weather(data)
+  def create_hourly_weather(data)
     data[:hourly].map do |hour|
       {
-        time:        Time.zone.at(hour[:dt]).to_s(:time),
+        time: Time.zone.at(hour[:dt]).to_s(:time),
         temperature: hour[:temp],
-        conditions:  hour[:weather].first[:description],
-        icon:        hour[:weather].first[:icon]
+        conditions: hour[:weather].first[:description],
+        icon: hour[:weather].first[:icon]
       }
     end
   end
