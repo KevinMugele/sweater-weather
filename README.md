@@ -1,4 +1,4 @@
-# Rails Engine
+# Sweater Weather
 
 ## Welcome to Sweater Weather!
 
