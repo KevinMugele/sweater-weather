@@ -31,5 +31,25 @@ describe 'Api::V1::RoadTrips API', type: :request do
         end
       end
     end
+
+    context 'when I provide a bad API key' do
+      context 'when I provide road trip params' do
+        let!(:user) { create(:user) }
+        let(:api_key) { user.api_key }
+        let(:road_trip_params) do
+          {
+            origin: 'Sparta, NJ',
+            destination: 'Newark, NJ',
+            api_key: '12381njk23'
+          }
+        end
+
+        before { post '/api/v1/road_trip', params: road_trip_params }
+
+        it 'returns an error message' do
+          expect(response.body).to eq('You have entered an invalid API key')
+        end
+      end
+    end
   end
 end
